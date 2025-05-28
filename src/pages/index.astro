@@ -17,7 +17,7 @@ const selectedLinks = { email, github, telegram, bsky }
   </p>
   <ul class='ul'>
     {
-      Object.entries(selectedLinks).map(([key, { label, link }]) => (
+      Object.entries(selectedLinks).map(([_key, { label, link }]) => (
         <li>
           <a href={link} target='_blank' rel='noopener noreferrer'>
             <span>{label}</span>

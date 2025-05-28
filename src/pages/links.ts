@@ -5,11 +5,11 @@ export const links = {
   },
   issue: {
     label: 'issue',
-    link: 'https://github.com/teplostanski/teplostanski.dev/issues',
+    link: 'https://github.com/teplostanski/teplostan.ski/issues',
   },
   donate: {
     label: 'donate',
-    link: 'https://donate.teplostanski.dev',
+    link: 'https://donate.teplostan.ski',
   },
   doka: {
     label: '',
@@ -25,12 +25,12 @@ export const links = {
   },
   email: {
     label: 'email',
-    link: 'mailto:igor@teplostanski.dev',
+    link: 'mailto:igor@teplostan.ski?bcc=teplostanski@yandex.ru',
   },
   github: { label: 'github', link: 'https://github.com/teplostanski' },
   telegram: { label: 'telegram', link: 'https://t.me/teplostanski' },
   bsky: {
     label: 'bsky',
-    link: 'https://bsky.app/profile/teplostanski.bsky.social',
+    link: 'https://bsky.app/profile/teplostan.ski',
   },
 } as const
