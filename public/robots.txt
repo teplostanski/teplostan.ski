@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://teplostan.ski/sitemap-index.xml
