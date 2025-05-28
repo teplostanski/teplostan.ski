@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { links } from './links'
+const { email, github, telegram, bsky } = links
+const selectedLinks = { email, github, telegram, bsky }
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+  <h1 class='h1'>igor teplostanski</h1>
+  <p class='p'>
+    Hi everyone 👋 My name is Igor, and I'm a frontend developer. In my free
+    time, I write for doka.guide, develop vite-plugin-pretty-module-classnames,
+    and work on Moonbloom Theme. I enjoy creating applications and open-source
+    projects. Below, I've left all the necessary links for you 👇
+  </p>
+  <ul class='ul'>
+    {
+      Object.entries(selectedLinks).map(([key, { label, link }]) => (
+        <li>
+          <a href={link} target='_blank' rel='noopener noreferrer'>
+            <span>{label}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <footer class='footer'>© 2022-2025</footer>
+</Layout>
+
+<style>
+  .h1::before {
+    content: '<h1>';
+    color: gray;
+    font-size: 1.5rem;
+  }
+  .h1::after {
+    content: '</h1>';
+    color: gray;
+    font-size: 1.5rem;
+  }
+  .p::before {
+    content: '<p>';
+    color: gray;
+  }
+  .p::after {
+    content: '</p>';
+    color: gray;
+  }
+  .ul::before {
+    content: '<ul>';
+    color: gray;
+  }
+  .ul::after {
+    content: '</ul>';
+    color: gray;
+  }
+  .ul li::before {
+    content: '<li>';
+    color: gray;
+  }
+  .ul li::after {
+    content: '</li>';
+    color: gray;
+  }
+  .ul {
+    list-style: none;
+    padding: 0;
+  }
+  .ul li {
+    padding: 0 0 0 1em;
+  }
+  .footer::after {
+    content: '</footer>';
+    color: gray;
+  }
+  .footer::before {
+    content: '<footer>';
+    color: gray;
+  }
+</style>
