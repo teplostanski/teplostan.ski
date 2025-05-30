@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import styles from './index.module.css'
 import { links } from './links'
 const { email, github, telegram, bsky } = links
 const selectedLinks = { email, github, telegram, bsky }
@@ -8,7 +9,7 @@ const selectedLinks = { email, github, telegram, bsky }
 ---
 
 <Layout>
-  <h1 class='h1'>igor teplostanski</h1>
+  <h1 class={styles.h1}>igor teplostanski</h1>
   <p class='p'>
     Hi everyone 👋 My name is Igor, and I'm a frontend developer. In my free
     time, I write for <a href="https://doka.guide/people/teplostanski/">doka.guide</a>, develop <a href="https://www.npmjs.com/package/vite-plugin-readable-classnames">vite-plugin-readable-classnames</a>,
@@ -30,16 +31,6 @@ const selectedLinks = { email, github, telegram, bsky }
 </Layout>
 
 <style>
-  .h1::before {
-    content: '<h1>';
-    color: gray;
-    font-size: 0.8em;
-  }
-  .h1::after {
-    content: '</h1>';
-    color: gray;
-    font-size: 0.8em;
-  }
   .p::before {
     content: '<p>';
     color: gray;
