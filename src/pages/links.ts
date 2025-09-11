@@ -30,6 +30,7 @@ export const links = {
   github: { label: 'github', link: 'https://github.com/teplostanski' },
   codeberg: { label: 'codeberg', link: 'https://codeberg.org/teplostanski' },
   telegram: { label: 'telegram', link: 'https://t.me/teplostanski' },
+  codepen: { label: 'codepen', link: 'https://codepen.io/teplostanski' },
   bsky: {
     label: 'bsky',
     link: 'https://bsky.app/profile/teplostan.ski',
