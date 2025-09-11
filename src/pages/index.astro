@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro'
 import styles from './index.module.css'
 import { links } from './links'
-const selectedKeys = ['email', 'github', 'codeberg', 'telegram', 'bsky', 'keyoxide'] as const
+const selectedKeys = ['email', 'github', 'codeberg', 'telegram', 'codepen', 'bsky', 'keyoxide'] as const
 const selected = selectedKeys.map((k) => links[k])
 ---
 
@@ -18,7 +18,7 @@ const selected = selectedKeys.map((k) => links[k])
     {
       selected.map(({ label, link }) => (
         <li>
-          <a href={link} target='_blank' rel='noopener noreferrer'>
+          <a href={link} target='_blank' rel='noopener noreferrer' rel='me'>
             <span>{label}</span>
           </a>
         </li>
