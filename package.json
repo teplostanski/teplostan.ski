@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.5.1",
-    "astro": "^5.8.0"
+    "astro": "^5.13.7"
   },
   "devDependencies": {
     "vite-plugin-readable-classnames": "^1.5.3"
