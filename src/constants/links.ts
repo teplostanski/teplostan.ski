@@ -16,8 +16,8 @@ export const links = {
     link: 'http://doka.guide',
   },
   vite_plugin: {
-    label: 'vite-plugin-pretty-module-classnames',
-    link: 'https://www.npmjs.com/package/vite-plugin-pretty-module-classnames',
+    label: 'vite-plugin-readable-classnames',
+    link: 'https://www.npmjs.com/package/vite-plugin-readable-classnames',
   },
   moonbloom_theme: {
     label: 'Moonbloom Theme',
