@@ -12,15 +12,15 @@ export const links = {
     link: 'https://donate.teplostan.ski',
   },
   doka: {
-    label: '',
+    label: 'doka.guide',
     link: 'http://doka.guide',
   },
   vite_plugin: {
-    label: '',
+    label: 'vite-plugin-pretty-module-classnames',
     link: 'https://www.npmjs.com/package/vite-plugin-pretty-module-classnames',
   },
   moonbloom_theme: {
-    label: '',
+    label: 'Moonbloom Theme',
     link: 'https://github.com/moonbloom-theme',
   },
   email: {

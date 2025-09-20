@@ -21,13 +21,20 @@
       href='https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap'
       rel='stylesheet'
     />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <link rel="author" href="/index.html">
+    <link rel='sitemap' href='/sitemap-index.xml' />
+    <link rel='author' href='/index.html' />
+    <meta name='description' content="Igor Teplostanski's personal website • Frontend and open source developer." />
+    <meta
+      name='keywords'
+      content='Igor Teplostanski, Igor Teplostansky, Игорь Теплостанский, JavaScript developer, TypeScript developer, Frontend developer, Web, Open Source'
+    />
     <meta name='generator' content={Astro.generator} />
     <title>teplostan.ski</title>
   </head>
   <body>
-    <slot />
+    <div class='container'>
+      <slot />
+    </div>
   </body>
 </html>
 
@@ -39,7 +46,9 @@
     height: 100%;
     font-family: 'Cousine', monospace;
   }
-  h1 {
-    font-size: 1.5em;
+
+  .container {
+    margin: 8px;
+    padding-top: 10px;
   }
 </style>

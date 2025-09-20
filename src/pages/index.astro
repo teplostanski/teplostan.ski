@@ -1,23 +1,36 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import styles from './index.module.css'
-import { links } from './links'
-const selectedKeys = ['email', 'github', 'codeberg', 'telegram', 'codepen', 'bsky', 'keyoxide'] as const
+import styles from '../styles/index.module.scss'
+import { links } from '../constants/links'
+
+const selectedKeys = [
+  'email',
+  'github',
+  'codeberg',
+  'telegram',
+  'codepen',
+  'bsky',
+  'keyoxide',
+] as const
 const selected = selectedKeys.map((k) => links[k])
+const currentYear = new Date().getFullYear()
 ---
 
 <Layout>
-  <h1 class={styles.h1}>igor teplostanski</h1>
-  <p class='p'>
+  <h1 class={styles.mainTitle}>igor teplostanski</h1>
+  <p class={styles.paragraph}>
     Hi everyone 👋 My name is Igor, and I'm a frontend developer. In my free
-    time, I write for <a href="https://doka.guide/people/teplostanski/">doka.guide</a>, develop <a href="https://www.npmjs.com/package/vite-plugin-readable-classnames">vite-plugin-readable-classnames</a>,
-    and work on <a href="https://github.com/moonbloom-theme/moonbloom">Moonbloom Theme</a>. I enjoy creating applications and open-source
-    projects. Below, I've left all the necessary links for you 👇
+    time, I write for <a href={links.doka.link}>{links.doka.label}</a>, develop <a
+      href={links.vite_plugin.link}>{links.vite_plugin.label}</a
+    >, and work on <a href={links.moonbloom_theme.link}
+      >{links.moonbloom_theme.label}</a
+    >. I enjoy creating applications and open-source projects. Below, I've left
+    all the necessary links for you 👇
   </p>
-  <ul class='ul'>
+  <ul class={styles.list}>
     {
       selected.map(({ label, link }) => (
-        <li>
+        <li class={styles.list__item}>
           <a href={link} target='_blank' rel='noopener noreferrer me'>
             <span>{label}</span>
           </a>
@@ -25,47 +38,5 @@ const selected = selectedKeys.map((k) => links[k])
       ))
     }
   </ul>
-  <footer class='footer'>© 2022-2025</footer>
+  <footer class={styles.footer}>© 2022-{currentYear}</footer>
 </Layout>
-
-<style>
-  .p::before {
-    content: '<p>';
-    color: gray;
-  }
-  .p::after {
-    content: '</p>';
-    color: gray;
-  }
-  .ul::before {
-    content: '<ul>';
-    color: gray;
-  }
-  .ul::after {
-    content: '</ul>';
-    color: gray;
-  }
-  .ul li::before {
-    content: '<li>';
-    color: gray;
-  }
-  .ul li::after {
-    content: '</li>';
-    color: gray;
-  }
-  .ul {
-    list-style: none;
-    padding: 0;
-  }
-  .ul li {
-    padding: 0 0 0 1em;
-  }
-  .footer::after {
-    content: '</footer>';
-    color: gray;
-  }
-  .footer::before {
-    content: '<footer>';
-    color: gray;
-  }
-</style>

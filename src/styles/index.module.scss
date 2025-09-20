@@ -1,0 +1,74 @@
+.mainTitle {
+  font-size: 1.5em;
+  margin: 0;
+
+  &:is(::before, ::after) {
+    color: gray;
+    font-size: 0.8em;
+  }
+
+  &::before {
+    content: '<h1>';
+    color: gray;
+    font-size: 0.8em;
+  }
+
+  &::after {
+    content: '</h1>';
+    color: gray;
+    font-size: 0.8em;
+  }
+}
+
+.paragraph {
+  &::before {
+    content: '<p>';
+    color: gray;
+  }
+
+  &::after {
+    content: '</p>';
+    color: gray;
+  }
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+
+  &::before {
+    content: '<ul>';
+    color: gray;
+  }
+
+  &::after {
+    content: '</ul>';
+    color: gray;
+  }
+}
+
+.list__item {
+  padding: 0 0 0 1em;
+
+  &::before {
+    content: '<li>';
+    color: gray;
+  }
+
+  &::after {
+    content: '</li>';
+    color: gray;
+  }
+}
+
+.footer {
+  &::before {
+    content: '<footer>';
+    color: gray;
+  }
+
+  &::after {
+    content: '</footer>';
+    color: gray;
+  }
+}
