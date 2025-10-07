@@ -1,0 +1,23 @@
+name: Mirror to Codeberg
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # нужно для --mirror
+          persist-credentials: false # чтобы не использовать токен github
+      - name: Push mirror to Codeberg
+        env:
+          CODEBERG_URL: ${{ secrets.CODEBERG_MIRROR_URL }}
+        run: |
+          git remote add codeberg "$CODEBERG_URL"
+          git push --mirror --force codeberg
+          
