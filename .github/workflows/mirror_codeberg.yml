@@ -10,16 +10,9 @@ jobs:
   mirror:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          persist-credentials: false
-      - name: Fetch all branches and tags
+      - name: Bare clone the repository
         run: |
-          git fetch --all
-      - name: Mirror to Codeberg
-        env:
-          MIRROR_URL: ${{ secrets.CODEBERG_MIRROR_URL }} #https://<username>:<token>@codeberg.org/<user_or_org>/<repo>.git 
-        run: |
-          git remote add codeberg "$MIRROR_URL"
+          git clone --mirror https://github.com/${{ github.repository }} repo.git
+          cd repo.git
+          git remote add codeberg ${{ secrets.CODEBERG_MIRROR_URL }}
           git push --mirror codeberg
