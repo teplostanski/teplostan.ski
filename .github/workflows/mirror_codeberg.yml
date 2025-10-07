@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Bare clone the repository
         run: |
-          git clone --mirror https://github.com/${{ github.repository }} repo.git
+          git clone --bare https://github.com/${{ github.repository }} repo.git
           cd repo.git
           git remote add codeberg ${{ secrets.CODEBERG_MIRROR_URL }}
-          git push --mirror codeberg
+          git push --prune codeberg refs/heads/*:refs/heads/* refs/tags/*:refs/tags/*
