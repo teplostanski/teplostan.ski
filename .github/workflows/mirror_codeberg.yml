@@ -16,10 +16,10 @@ jobs:
           persist-credentials: false
       - name: Fetch all branches and tags
         run: |
-          git fetch --all --prune
+          git fetch --all
       - name: Mirror to Codeberg
         env:
-          MIRROR_URL: ${{ secrets.CODEBERG_MIRROR_URL }}
+          MIRROR_URL: ${{ secrets.CODEBERG_MIRROR_URL }} #https://<username>:<token>@codeberg.org/<user_or_org>/<repo>.git 
         run: |
           git remote add codeberg "$MIRROR_URL"
           git push --mirror codeberg
