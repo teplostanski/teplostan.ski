@@ -1,7 +1,7 @@
 {
-  "name": "teplostan.ski",
+  "name": "teplostanski.me",
   "type": "module",
-  "version": "0.0.1",
+  "version": "7",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -9,11 +9,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.5.1",
-    "astro": "^5.14.1"
+    "@astrojs/sitemap": "^3.6.0",
+    "astro": "^5.14.5"
   },
   "devDependencies": {
-    "sass-embedded": "^1.92.1",
-    "vite-plugin-readable-classnames": "^1.5.3"
+    "sass-embedded": "^1.93.2",
+    "vite-plugin-readable-classnames": "^1.5.5"
   }
 }

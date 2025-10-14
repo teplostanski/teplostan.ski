@@ -5,11 +5,11 @@ export const links = {
   },
   issue: {
     label: 'issue',
-    link: 'https://github.com/teplostanski/teplostan.ski/issues',
+    link: 'https://github.com/teplostanski/teplostanski.me/issues',
   },
   donate: {
     label: 'donate',
-    link: 'https://donate.teplostan.ski',
+    link: 'https://donate.teplostanski.me',
   },
   doka: {
     label: 'doka.guide',
@@ -25,7 +25,7 @@ export const links = {
   },
   email: {
     label: 'email',
-    link: 'mailto:igor@teplostan.ski?bcc=teplostanski@yandex.ru',
+    link: 'mailto:igor@teplostanski.me?bcc=teplostanski@yandex.ru',
   },
   github: { label: 'github', link: 'https://github.com/teplostanski' },
   codeberg: { label: 'codeberg', link: 'https://codeberg.org/teplostanski' },
@@ -33,7 +33,7 @@ export const links = {
   codepen: { label: 'codepen', link: 'https://codepen.io/teplostanski' },
   bsky: {
     label: 'bsky',
-    link: 'https://bsky.app/profile/teplostan.ski',
+    link: 'https://bsky.app/profile/teplostanski.me',
   },
   keyoxide: {
     label: 'keyoxide',

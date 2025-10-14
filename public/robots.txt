@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://teplostan.ski/sitemap-index.xml
+Sitemap: https://teplostanski.me/sitemap-index.xml
