@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap'
 import readableClassnames from 'vite-plugin-readable-classnames'
 
 export default defineConfig({
-  site: 'https://teplostan.ski',
+  site: 'https://teplostanski.me',
   integrations: [sitemap()],
   vite: { plugins: [readableClassnames({ lineNumber: true })] },
 })
